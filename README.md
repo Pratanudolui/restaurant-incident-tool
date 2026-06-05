@@ -3,7 +3,7 @@
 An AI-powered web application for QSR/restaurant operations teams to report, track, and manage operational incidents in real time.
 
 ## 🌐 Live Demo
-[View Deployed App](YOUR-DEPLOYMENT-LINK-HERE)
+[View Deployed App](https://restaurant-incident-tool-lemon.vercel.app)
 
 ## ✨ Features
 - **Incident Submission** — Structured form with title, description, category, severity, store location, and date/time
