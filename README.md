@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🍕 Restaurant Incident Reporting Tool
 
-## Getting Started
+An AI-powered web application for QSR/restaurant operations teams to report, track, and manage operational incidents in real time.
 
-First, run the development server:
+## 🌐 Live Demo
+[View Deployed App](YOUR-DEPLOYMENT-LINK-HERE)
 
+## ✨ Features
+- **Incident Submission** — Structured form with title, description, category, severity, store location, and date/time
+- **Smart Dashboard** — Filter by category, severity, status; search by keyword; real-time stats
+- **Status Management** — Update incident lifecycle (Open → In Progress → Resolved → Closed)
+- **AI Summaries** — Claude AI auto-generates concise summaries on every submission
+- **Delete Incidents** — Remove resolved or erroneous reports
+
+## 🛠️ Tech Stack
+| Layer | Technology |
+|---|---|
+| Frontend | Next.js 14 (App Router), React, Tailwind CSS |
+| Backend | Next.js API Routes (Node.js) |
+| Database | SQLite via better-sqlite3 |
+| AI | Anthropic Claude API (claude-sonnet-4) |
+| Deployment | Vercel |
+| Icons | Lucide React |
+
+## 🚀 Setup Instructions
+
+### Prerequisites
+- Node.js 18+
+- npm
+
+### Local Development
 ```bash
+git clone https://github.com/YOUR-USERNAME/restaurant-incident-tool.git
+cd restaurant-incident-tool
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+Open [http://localhost:3000](http://localhost:3000)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📐 Assumptions
+- Single-store and multi-store submissions are both supported via free-text location field
+- SQLite is used for simplicity and portability; easily swappable for PostgreSQL
+- AI summary generation is non-blocking — incidents save even if AI call fails
+- No authentication implemented; designed as an internal ops tool
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📦 External Libraries
+- `better-sqlite3` — synchronous SQLite driver for Node.js
+- `lucide-react` — icon library
+- `@anthropic-ai/sdk` (via fetch) — Claude AI for summaries
